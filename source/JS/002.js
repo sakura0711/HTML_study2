@@ -1,0 +1,1 @@
+document.write('我使用外部引入方式');
