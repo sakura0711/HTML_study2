@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 一般數字型別
+        let num1;
+        let num2 = 0.4;
+
+        // 字串型別
+        let string = 'this is string type';
+
+        // 布林型別
+        let flag = false;
+        let flag1 = true;
+        let flag2 = undefined; // 未定義 ， 須注意 undefined + 1 = NaN(not a number)
+        let flag2_1 // 沒給值就是 undefined
+        let flag3 = null;      // 空值 ， 須注意 null + 1 = 1
+
+        // 查看數據類型，使用 typeof
+        console.log(typeof flag);
+        console.log(typeof flag2_1);
+        console.log(typeof num);
+        console.log(typeof string);
+
+        // 類型的轉換
+        let input_num1 = prompt('請輸入一個數字'); // 你以為是 int ? 錯，是string
+        string = string + num1; // 字串 + any 就是字串
+
+
+
+        // 隱式轉換------------------------------------
+
+        // 使用 + 號進行轉換
+        let num = +'1234';
+        let input_num2 = +prompt('請輸入數字');
+
+        // 顯示轉換 -----------------------------------
+
+        // 轉換 數字類型
+        let input_num3 = Number('1234'); // 轉換"數字類型"，有可能會有 NaN 發生
+        let input_num4 = parseInt('12345'); // 只保留整數
+        let input_num5 = parseFloat('123.5') // 會保留小數
+
+        // 轉換 字串類型
+        let num3 = 89;
+        num3.toString(); // 後面參數可以調整進位制，不填就是直接轉
+    </script>
+
+</body>
+
+</html>
