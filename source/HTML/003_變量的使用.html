@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        span {
+            font: 500 16px/2 "Microsoft YaHei";
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+
+        // 聲明變量
+        // tip : 在 javascript 中沒有 "型別的概念 (int, string, double ...)"
+        // 在 Typescript 中才有
+        let input1 = prompt('請輸入第一個數字: ');
+        let input2 = prompt('請輸入第二個數字: ');
+
+        // 輸出變量 
+        document.write(`<span>變量一${input1}</span><br/>`);
+        document.write(`<span>變量二${input1}</span><br/>`);
+
+        //對變量進行改動
+        input1 = parseInt(input1, 10); // 轉整數(變量名/要轉的進位置 ex. 10 , 8 , 16)
+        input2 = parseInt(input2, 10);
+
+        let ans = input1 + input2;
+        document.write(`兩者相加${ans}<br/>`);
+
+        // 兩變量交換
+        let num1 = 10;
+        let num2 = 20;
+        let temp;
+
+        // 開始交換
+        temp = num1;
+        num1 = num2;
+        num2 = temp;
+
+        console.log(num1 + '&nbsp;' + num2);
+
+    </script>
+</body>
+
+</html>
