@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 頁面輸出 1 - 100
+        let i = 1;
+        while (i <= 100) {
+            document.write(`<p>${i++}</p>`);
+        }
+
+        // 計算 1 - 100 總和
+        let count = 1;
+        let total = 0;
+        while (count <= 100) {
+            total += count;
+            count++;
+        }
+        alert(total);
+
+        // 計算 1 - 100 之間偶數和
+        let count2 = 1;
+        let add = 0;
+        while (count2 < 100) {
+            add += count2 % 2 == 0 ? count2 : 0;
+            count2++;
+        }
+        console.log(`Add = ` + add);
+    </script>
+</body>
+
+</html>
