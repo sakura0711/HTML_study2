@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>訂單明細</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        table {
+
+            margin: 100px auto;
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <table cellpadding="10" class="order_details" align="center" border="2" cellspacing="0">
+        <!-- caption 為標題標籤 -->
+        <caption>訂單明細</caption>
+        <thead>
+            <tr>
+                <th>商品名稱</th>
+                <th>商品價格</th>
+                <th>商品數量</th>
+                <th>總價</th>
+                <th>收貨地址</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+                <td>5</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <script>
+        let td_array = document.querySelectorAll("td");
+
+        let commodity_info = [];
+        let commodity_tip = ['商品名稱', '商品價格', '商品數量'];
+        let commodity_total; // 總價
+
+        for (let index = 0; index < 3; index++) {
+            commodity_info[index] = prompt(`請輸入 ${commodity_tip[index]}:`);
+        }
+        commodity_total = +commodity_info[1] * +commodity_info[2];
+        let commodity_receive = prompt('請輸入收貨地址:');
+
+        for (let index = 0; index < commodity_info.length; index++) {
+            td_array[index].innerHTML = commodity_info[index];
+        }
+        td_array[3].innerHTML = commodity_total;
+        td_array[4].innerHTML = commodity_receive;
+        
+
+    </script>
+</body>
+
+</html>
