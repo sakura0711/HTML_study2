@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let money = 0;
+        while (true) {
+            let select = prompt('請輸入要操作的數字: \n');
+
+            if (select == '4') break
+
+            switch (select) {
+                case '1':
+                    temp = +prompt('要存入的金額: \n');
+                    money += temp;
+                    alert(`目前帳戶金額: ${money}`);
+                    break;
+                case '2':
+                    temp = +prompt('要領取的金額: ');
+                    money -= temp;
+                    alert(`目前帳戶金額: ${money}`);
+                    break;
+                case '3':
+                    alert(`目前帳戶金額: ${money}`);
+                    break;
+                default:
+                    alert('請輸入正確選項: ');
+                    continue;
+            }
+        }
+
+    </script>
+</body>
+
+</html>
