@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let array = ['black', 'pink', 'skyblue', 'plum'];
+
+        // > 添加新元素 or 數組 -----------------------------------------------
+
+        // 1. 使用 push，會加到數"後面" (會返回數組長度)
+        array.push('green');
+        array.push('red', 'blue', 'white');
+        // 2. 使用 unshift，會加到數組"前面" (會返回數組長度)
+        array.unshift('color_theme');
+        console.log(`array: ` + array);
+
+
+        // > 刪除元素 -------------------------------------------------------
+
+        // 1. 使用 pop()，會刪除 "最後一個" 元素 (返回刪除的元素)
+        let array2 = [0, 1, 2, 3, 4, 5, 6];
+        console.log(`array2: ` + array2);
+
+        pop_result = array2.pop();
+        console.log(`[array2] pop_result: ` + pop_result);
+        console.log(`array2: ` + array2);
+
+
+        // 2. 使用 shift()，會刪除 "第一個" 元素 (返回刪除的元素)
+        shift_result = array2.shift();
+        console.log(`[array2] shift_result: ` + shift_result)
+        console.log(`array2: ` + array2);
+
+
+        // 3. 使用 splice()，可以刪除區間元素
+        // splice(start/deleteCount); start 必填，deleteCount 沒填會直接刪除start後面全部元素
+        splice_result = array2.splice(1, 3);
+        console.log(`[array2] splice_result: ` + splice_result)
+        console.log(`array2: ` + array2);
+
+
+        // > 數組的篩選 -------------------------------------------------------
+
+        // 練習1. 將 1000 塊以上的元素放到新數組
+        let commodity_price = ['1000', '988', '560', '2300', '670'];
+        let commodity_noble = [];
+
+        for (let i = 0; i < commodity_price.length; i++) {
+            if (commodity_price[i] >= 1000) {
+                commodity_noble.push(commodity_price[i]);
+            }
+        }
+        console.log(commodity_noble);
+
+
+        // 練習2. 去除 0
+        let int_arr = [0, 10, 3, 556, 0, 65, 872, 4];
+        let new_int_arr = [];
+        for (let i = 0; i < int_arr.length; i++) {
+            if (int_arr[i] != 0) {
+                new_int_arr.push(int_arr[i]);
+            }
+        }
+        console.log(new_int_arr);
+
+        array
+    </script>
+</body>
+
+</html>
