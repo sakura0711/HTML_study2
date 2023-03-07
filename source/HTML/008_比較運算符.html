@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let num1 = 10;
+        let num1_1 = '10';
+        let num2 = 10.3;
+
+        let string1 = 'string1';
+
+        // 一般比較運算符與 python 、 C++ 相同。
+
+        // 須注意的為 == 和 === 和 !==
+
+        // == 僅判斷兩邊的內容是否相同(不判斷型別)
+        let bool1 = num1 == num1_1; // true (內容相同)
+        console.log(bool1);
+
+        // != 僅判斷兩邊的內容是否不相同(不判斷型別)
+        let bool1_1 = num1 != num2; // true (內容不相同)
+        console.log(bool1_1);
+
+        // === 會判斷型別以及內容
+        let bool2 = num1 === num1_1; // false (內容相同、型別不同)
+        console.log(bool2);
+
+        // !== 全不等，內容、型別完全不一樣
+        let bool2_2 = num1 !== string1 // true (完全不同)
+        console.log(bool2_2);
+
+        // 另外 NaN != NaN
+        let bool3 = NaN == NaN; // false
+        console.log(bool3);
+        let bool3_3 = NaN === NaN; //false
+        console.log(bool3_3);
+
+
+    </script>
+</body>
+
+</html>
