@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            display: flex;
+            width: 500px;
+            height: 300px;
+            margin: 100px auto;
+            border-bottom: 1px solid plum;
+            justify-content: space-around;
+            align-items: flex-end;
+        }
+
+        .box>.lv_bar {
+            display: flex;
+            width: 20px;
+            background-color: pink;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .box>h4 {
+            margin-top: 100px;
+            width: 100px;
+            height: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        let histogram_level = [];
+        for (let i = 0; i < 4; i++) {
+            histogram_level[i] = +prompt(`請輸入第${i + 1}度的收支程度(0~100): `);
+        }
+
+        document.write('<div class="box">') // 盒子開頭
+        for (i = 0; i < histogram_level.length; i++) {
+            document.write(`
+            <div class="lv_bar" style="height:${histogram_level[i]}px">
+                <span>${histogram_level[i]}</span>
+                <h4>第${i}季度</h4>
+            </div>
+            `)
+        }
+        document.write('</div>') // 盒子結尾
+    </script>
+</body>
+
+</html>
