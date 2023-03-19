@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Declare a function fullName and it print out your full name.
+        function full_name() {
+            let firstName = 'sakura';
+            let lastName = 'yukina';
+            console.log(`1. my name is ${firstName} ${lastName}`);
+        };
+        full_name();
+
+        // Upper arr words 
+        function wordUpper(arr) {
+            // 創建新陣列
+            let newArr = [];
+            // 遍歷
+            for (const element of arr) {
+                //將舊陣列變為大寫後 push 到 newArr 裡面
+                newArr.push(element.toUpperCase());
+            }
+            // 回傳
+            return newArr;
+        }
+        const stringArr = ['first', 'last'];
+        console.log(`2. the wordsUpper: ${wordUpper(stringArr)}`);
+
+        // Declare a function addNumbers and it takes two two parameters and it returns sum.
+        let num1 = 20;
+        let num2 = 30;
+        function AddNumbers(num1, num2) {
+            return num1 + num2;
+        }
+        console.log(`3. num1 + num2 = ${AddNumbers(num1, num2)}`);
+
+        //An area of a rectangle is calculated as follows: area = length x width. Write a function which calculates areaOfRectangle.
+        const areaOfRectangle = (length, width) => length * width;  // 箭頭函數
+        console.log(`4. area = ${areaOfRectangle(20, 30)}`)
+
+        // A volume of a rectangular prism is calculated as follows: volume = length x width x height. Write a function which calculates volumeOfRectPrism.
+        const volumeOfRectPrism = (length, width, height) => length * width + height;
+        console.log(`6. volume = ${volumeOfRectPrism(20, 30)}`);
+
+        // Area of a circle is calculated as follows: area = π x r x r. Write a function which calculates areaOfCircle
+        const PI = 3.14159;
+        const areaOfCircle = (radius) => radius * radius * PI;
+        console.log(`7. CircleArea = ${areaOfCircle(4)}`);
+
+        // Circumference of a circle is calculated as follows: circumference = 2πr. Write a function which calculates circumOfCircle\
+        const circumOfCircle = (radius) => 2 * PI * radius;
+        console.log(`8. circumOfCircle = ${circumOfCircle(4)}`);
+
+        // 13. BMI calculated
+        function BMIcalculate(weight, height) {
+            let BMI = weight / (height * height);
+            console.log(`13. BMI = ${BMI}`);
+            if (BMI <= 18.5) return 'Underweight'
+            else if (BMI <= 24.9) return 'Normal weight'
+            else if (BMI <= 29.9) return 'Overweight'
+            else return 'Obese'
+        }
+        let people = {
+            weight: 49,
+            height: 1.67,
+        }
+        console.log(`13. Your BMI is ${BMIcalculate(people.weight, people.height)}`);
+
+        // 15. findMax
+        // ...代表可以接受多個參數
+        function FindMax(...numArr) {
+            let max = 0;
+            for (const number of numArr) {
+                if (number > max) max = number;
+            }
+            return max;
+        }
+        console.log(`15. Max number is ${FindMax(2, 90, 2, 4, 5)}`);
+
+    </script>
+</body>
+
+</html>
