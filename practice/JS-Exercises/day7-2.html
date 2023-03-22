@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>level 2 </title>
+</head>
+
+<body>
+    <script>
+        // 2. solveQuadratic 創建一個可以計算線性函數的 function 
+        const solveQuadratic = (a = 0, b = 0, c = 0) => {
+            console.log(a, b, c);
+            let Discriminant = b * b - 4 * a * c;
+            console.log(Discriminant);
+            if (Discriminant > 0) {
+                let x1 = (-b + Math.sqrt(Discriminant)) / (2 * a);
+                let x2 = (-b - Math.sqrt(Discriminant)) / (2 * a);
+                let ans = [x1, x2];
+                return ans;
+            }
+            else if (Discriminant === 0) {
+                let ans = (-b - Math.sqrt(Discriminant)) / (2 * a);
+                return ans;
+            }
+            else { return false; }
+        }
+
+        console.log(solveQuadratic()) // {0}
+        console.log(solveQuadratic(1, 4, 4)) // {-2}
+        console.log(solveQuadratic(1, -1, -2)) // {2, -1}
+        console.log(solveQuadratic(1, 7, 12)) // {-3, -4}
+        console.log(solveQuadratic(1, 0, -4)) //{2, -2}
+        console.log(solveQuadratic(1, -1, 0)) //{1, 0}
+
+        // 4. printDate 
+        let Date = {
+            year: '2023',
+            month: '03',
+            day: '21',
+            time: {
+                minutes: 04,
+                seconds: 43,
+            }
+        }
+        function PrintDate(DATE) {
+            console.log(`${DATE.day}/${DATE.month}/${DATE.year} ${DATE.time.minutes}:${DATE.time.seconds}`);
+        }
+        PrintDate(Date);
+
+        // 12. add range even
+        let AddEven = (range) => {
+            let sum = 0;
+            for (let i = 0; i < range; i += 2) {
+                sum += i;
+            }
+            return sum;
+        }
+        let range = 100;
+        console.log(`sum = ${AddEven(range)}`);
+
+        //15. Writ a function which generates a randomUserIp.
+        const MAX = 10;
+        const randomNumber = (MAX) => {
+            // Math.random 會產生 0~1 間的小數
+            return Math.floor(Math.random() * MAX);
+            // floor 函式會回傳小於等於所給數字的最大整數
+        };
+        const RandomUserIP = (length) => {
+            let userIP = [];
+            for (let i = 0; i < length; i++) {
+                // userIP.join(randomNumber(MAX)) 錯誤 因為join 方法是將 "字符串" 加入;
+                // 這邊應該要使用 push
+                userIP.push(randomNumber(MAX));
+            }
+            return userIP;
+        }
+        console.log(`userIP = ${RandomUserIP(10)}`);
+
+        // 隨機生成 7 位數字(包括英文字母)
+    </script>
+</body>
+
+</html>
