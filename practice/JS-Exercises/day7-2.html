@@ -71,7 +71,7 @@
         const RandomUserIP = (length) => {
             let userIP = [];
             for (let i = 0; i < length; i++) {
-                // userIP.join(randomNumber(MAX)) 錯誤 因為join 方法是將 "字符串" 加入;
+                // userIP.join(randomNumber(MAX)) 錯誤 因為join 方法是將數組加入變成 "字符串" ;
                 // 這邊應該要使用 push
                 userIP.push(randomNumber(MAX));
             }
@@ -80,6 +80,16 @@
         console.log(`userIP = ${RandomUserIP(10)}`);
 
         // 隨機生成 7 位數字(包括英文字母)
+        const randSeed = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9',
+            'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
+        const RandomString = (length) => {
+            const randomString = [];
+            for (let i = 0; i < length; i++) {
+                randomString.push(randSeed[randomNumber(randSeed.length)]);
+            }
+            return randomString.join('');
+        }
+        console.log(`randomString = ${RandomString(7)}`);
     </script>
 </body>
 
